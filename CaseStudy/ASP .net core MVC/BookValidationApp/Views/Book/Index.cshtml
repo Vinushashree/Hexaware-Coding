@@ -1,0 +1,30 @@
+﻿@model List<BookValidationApp.Models.Book>
+@{
+    ViewData["Title"] = "Books List";
+}
+
+<h2>Books List</h2>
+<a href="/Book/Create" class="btn btn-success">Add New Book</a>
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Published Date</th>
+            <th>Book URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Isbn</td>
+                <td>@book.BookName</td>
+                <td>@book.AuthorName</td>
+                <td>@book.PublishedDate.ToShortDateString()</td>
+                <td><a href="@book.BookUrl" target="_blank">@book.BookUrl</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

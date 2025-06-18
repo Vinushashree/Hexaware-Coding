@@ -1,0 +1,11 @@
+﻿@model ContactsDirectory.Models.ContactInfo
+<h2>Contact Details</h2>
+<div>
+    <p>ID: @Model.ContactId</p>
+    <p>Name: @Model.FirstName @Model.LastName</p>
+    <p>Email: @Model.EmailId</p>
+    <p>Mobile: @Model.MobileNo</p>
+    <p>Company: @Model.CompanyName</p>
+    <p>Designation: @Model.Designation</p>
+</div>
+<a href="/Contact/ShowContacts">Back</a>
